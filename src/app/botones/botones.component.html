@@ -1,0 +1,15 @@
+<div>
+  <button class="btn btn-primary"
+  (click)="img = 'https://images.pexels.com/photos/17265260/pexels-photo-17265260/free-photo-of-ciudad-rascacielos-urbano-ciudades.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load'"
+  >
+    Imagen 1
+  </button>
+
+  <button class="btn btn-danger"
+  (click)="img = 'https://images.pexels.com/photos/18325774/pexels-photo-18325774/free-photo-of-comida-gente-flores-verano.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load'"
+  >
+    Imagen 2
+  </button>
+</div>
+
+<img [src]="img" alt="">
