@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
-  openAlert:boolean = false;
+  openAlert: boolean = false;
 
-  public mostrar_en_consola(name:string):void{
+  public mostrar_en_consola(name: string): void {
     console.log(name);
 
-    this.openAlert = true;
+    this.openAlert = true
   }
 }
