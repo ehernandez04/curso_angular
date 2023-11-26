@@ -11,7 +11,7 @@ export class Formulario2Component {
     nombre: '',
     edad: ''
   }
-  
+
   public procesar():void {
     console.log(this.persona);
   }
