@@ -1,12 +1,13 @@
 <div class="car">
   <div class="card-body">
-    <form>
+
+    <form [formGroup]="formUser" (ngSubmit)="procesar()">
       <div class="mb-2 ">
         <label class="form-label">
           Nombre
         </label>
 
-        <input type="text" [formControl]="name" name="" id="" class="form-control"
+        <input type="text" formControlName="name" name="" id="" class="form-control"
           placeholder="Por favor ingrese su nombre">
 
         <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
@@ -20,7 +21,7 @@
           Email
         </label>
 
-        <input type="email" [formControl]="email" name="" id="" class="form-control"
+        <input type="email" formControlName="email" name="" id="" class="form-control"
           placeholder="Por favor ingrese su email">
 
           <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
@@ -36,11 +37,12 @@
 
       </div>
 
-      <button class="btn btn-primary ">
+      <button class="btn btn-primary" [disabled]="formUser.invalid">
         Enviar
       </button>
-    </form>
-  </div>
 
-  {{email.errors | json}}
+    </form>
+
+  </div>
 </div>
+
