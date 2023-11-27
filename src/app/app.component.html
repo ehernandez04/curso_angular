@@ -1,12 +1,8 @@
-<!-- <app-contador></app-contador> -->
-<!-- <app-botones></app-botones> -->
-<!-- <app-formulario></app-formulario> -->
-
 <div class="container">
-  <h1>{{title}}</h1>
+  <h2>Componente padre</h2>
 
-  <input type="text" class="form-control" [(ngModel)] = "title">
+  <input type="text" class="form-control mb-4" [(ngModel)] = "title">
 
-  <app-children [title]="title"></app-children>
+  <app-children [(title)]="title" ></app-children>
 
 </div>
